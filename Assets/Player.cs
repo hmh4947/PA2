@@ -8,10 +8,12 @@ public class Player : MonoBehaviour
     public float rotationSpeed = 360f;
 
     CharacterController characterController;
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
     }
     void Update()
     {
@@ -28,5 +30,8 @@ public class Player : MonoBehaviour
         }
         // Move()를 이용해 이동, 충돌 처리, 속도 값 얻기 가능
         characterController.Move(direction * moveSpeed * Time.deltaTime);
+        // Speed 파라미터를 통해 현재 속도의 크기(Character Controller)를 전달
+        animator.SetFloat("Speed", characterController.velocity.magnitude);
+
     }
 }
