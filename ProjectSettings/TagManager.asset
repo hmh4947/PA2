@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collider
+  - Coin
+  - Cube
+  - Enemy
   layers:
   - Default
   - TransparentFX

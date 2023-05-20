@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +11,25 @@ public class Player : MonoBehaviour
 
     CharacterController characterController;
     Animator animator;
+    
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Coin")
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "Enemy")
+        {
+            SceneManager.LoadScene("Main");
+        }
+    }
+    /* void OnTriggerEnter(Collision coll)
+     {
+         if (coll.collider.tag == "Coin")
+         {
+             Destroy(gameObject);
+         }
+     }*/
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +53,11 @@ public class Player : MonoBehaviour
         characterController.Move(direction * moveSpeed * Time.deltaTime);
         // Speed 파라미터를 통해 현재 속도의 크기(Character Controller)를 전달
         animator.SetFloat("Speed", characterController.velocity.magnitude);
+        if (GameObject.FindGameObjectsWithTag("Cube").Length == 0)
+        {
+            SceneManager.LoadScene("Main");
 
+        }
+        
     }
 }
