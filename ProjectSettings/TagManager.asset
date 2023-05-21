@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - Cube
   - Enemy
+  - HP
   layers:
   - Default
   - TransparentFX

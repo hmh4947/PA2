@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
         }
         if (other.tag == "Enemy")
         {
-            SceneManager.LoadScene("Main");
+           // SceneManager.LoadScene("Main");
         }
     }
     
