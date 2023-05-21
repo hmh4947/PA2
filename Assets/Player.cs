@@ -28,10 +28,7 @@ public class Player : MonoBehaviour
         {
            // SceneManager.LoadScene("Main");
         }
-        if (other.tag == "Ball")
-        {
-            SceneManager.LoadScene("GameOver");
-        }
+        
 
     }
    
@@ -61,7 +58,7 @@ void Start()
 
         if (GameObject.FindGameObjectsWithTag("Cube").Length == 0)
         {
-          //  SceneManager.LoadScene("Main2");
+            SceneManager.LoadScene("GameClear");
 
         }
         
