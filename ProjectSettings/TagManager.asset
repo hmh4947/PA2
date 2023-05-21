@@ -9,6 +9,8 @@ TagManager:
   - Cube
   - Enemy
   - HP
+  - Door
+  - Ball
   layers:
   - Default
   - TransparentFX

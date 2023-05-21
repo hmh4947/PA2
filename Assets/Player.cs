@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     CharacterController characterController;
     Animator animator;
+
     
     void OnTriggerEnter(Collider other)
     {
@@ -21,15 +22,21 @@ public class Player : MonoBehaviour
         if (other.tag == "Coin")
         {
             Destroy(other.gameObject);
+         
         }
         if (other.tag == "Enemy")
         {
            // SceneManager.LoadScene("Main");
         }
+        if (other.tag == "Ball")
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
     }
-    
-    // Start is called before the first frame update
-    void Start()
+   
+// Start is called before the first frame update
+void Start()
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
@@ -54,7 +61,7 @@ public class Player : MonoBehaviour
 
         if (GameObject.FindGameObjectsWithTag("Cube").Length == 0)
         {
-            SceneManager.LoadScene("Main");
+          //  SceneManager.LoadScene("Main2");
 
         }
         
