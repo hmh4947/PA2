@@ -9,7 +9,8 @@ public class Ballcollision : MonoBehaviour
     {
         if (coll.gameObject.tag == "Ball")
         {
-            SceneManager.LoadScene("GameOver");
+           
+           SceneManager.LoadScene("GameOver");
         }
     }
 // Start is called before the first frame update

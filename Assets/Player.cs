@@ -28,7 +28,11 @@ public class Player : MonoBehaviour
         {
            // SceneManager.LoadScene("Main");
         }
-        
+        if (other.tag == "Ball")
+        {
+     
+            SceneManager.LoadScene("Main");
+        }
 
     }
    

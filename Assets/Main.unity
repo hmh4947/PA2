@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: -0.03599997, y: 5.6159997, z: -14.890001}
+  m_FollowOffset: {x: -0.03599997, y: 4.516, z: -15.269999}
   m_XDamping: 0.1
   m_YDamping: 0.1
   m_ZDamping: 0.1
@@ -276,8 +276,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40546712}
-  m_LocalRotation: {x: 0.1647201, y: 0.0011923296, z: -0.0001991207, w: 0.9863396}
-  m_LocalPosition: {x: -0.2, y: 6.1, z: -38.4}
+  m_LocalRotation: {x: 0.12823324, y: 0.0011690467, z: -0.00015115869, w: 0.9917434}
+  m_LocalPosition: {x: -0.2, y: 5, z: -38.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 28317747}
@@ -673,11 +673,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4233366137089380037, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.025034066
+      value: -0.02503407
       objectReference: {fileID: 0}
     - target: {fileID: 4233366137089380037, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0012542872
+      value: 0.0012542874
       objectReference: {fileID: 0}
     - target: {fileID: 8189980434977739222, guid: 2dfbb63c9cdf7504faf4ff26b0581598, type: 3}
       propertyPath: m_Name
@@ -1485,7 +1485,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 268fb387e484dc446a8f3ef490121233, type: 2}
+  - {fileID: 2100000, guid: 75749d6b5eee34349aaed42a1095b626, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2991,8 +2991,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.1647201, y: 0.0011923296, z: -0.0001991207, w: 0.9863396}
-  m_LocalPosition: {x: -0.2, y: 6.1, z: -38.4}
+  m_LocalRotation: {x: 0.12823324, y: 0.0011690467, z: -0.00015115869, w: 0.9917434}
+  m_LocalPosition: {x: -0.2, y: 5, z: -38.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3045,6 +3045,7 @@ GameObject:
   - component: {fileID: 970670699}
   - component: {fileID: 970670700}
   - component: {fileID: 970670701}
+  - component: {fileID: 970670702}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3127,6 +3128,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarSlider: {fileID: 1554973451}
   gameOverText: {fileID: 0}
+--- !u!136 &970670702
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970670696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1091064172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4267,7 +4282,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1453159848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.33, y: 14.27, z: 46.28}
+  m_LocalPosition: {x: 7.711, y: 14.27, z: 46.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
