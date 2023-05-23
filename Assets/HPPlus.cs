@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class HPPlus : MonoBehaviour
 {
     public Slider healthBarSlider;
@@ -20,10 +20,11 @@ public class HPPlus : MonoBehaviour
             healthBarSlider.value += .08f;
             Destroy(other.gameObject);
         }
-        else
+       else
         {
-           // isGameOver = true;
-          //  gameOverText.enabled = true;
+          //  SceneManager.LoadScene("GameOver");
+            // isGameOver = true;
+            //  gameOverText.enabled = true;
         }
 
     }

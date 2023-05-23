@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemyDamage : MonoBehaviour
 {
     public Slider healthBarSlider;
-    public Text gameOverText;
-    private bool isGameOver = false;
+    
+    
     void Start()
     {
-        gameOverText.enabled = false;
     }
     void OnTriggerStay(Collider other)
     {
@@ -18,10 +18,10 @@ public class EnemyDamage : MonoBehaviour
         {
             healthBarSlider.value -= .008f;
         }
-        else
+        if (other.gameObject.tag == "Enemy" && healthBarSlider.value <= 0)
         {
-            isGameOver = true;
-            gameOverText.enabled = true;
+            SceneManager.LoadScene("GameOver");
+            
         }
 
     }
