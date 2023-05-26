@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
       
-     //   cube3 = false;
+       cube3 = false;
     }
     void Update()
     {

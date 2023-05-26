@@ -12,7 +12,7 @@ TagManager:
   - Door
   - Ball
   - Platform
-  - y
+  - Floor
   layers:
   - Default
   - TransparentFX
