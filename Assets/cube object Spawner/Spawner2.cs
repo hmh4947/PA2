@@ -12,7 +12,15 @@ public class Spawner2 : MonoBehaviour
     {
         StartCoroutine(CreateCube());
     }
+    void OnTriggerEnter(Collider other)
+    {
 
+        if (other.gameObject.tag == "Collider")
+        {
+            Destroy(gameObject, 0f);
+        }
+
+    }
     IEnumerator CreateCube()
     {
         WaitForSeconds wait = new WaitForSeconds(interval);

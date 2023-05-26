@@ -7,9 +7,17 @@ public class Spawner3 : MonoBehaviour
     public GameObject CubefloorPrefab;
     public float interval;
 
-  
 
-     //   public float range=3.0f;
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Collider")
+        {
+            Destroy(gameObject, 0f);
+        }
+
+    }
+    //   public float range=3.0f;
     // Start is called before the first frame update
     void Start()
     {
