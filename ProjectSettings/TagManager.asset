@@ -11,6 +11,8 @@ TagManager:
   - HP
   - Door
   - Ball
+  - Platform
+  - y
   layers:
   - Default
   - TransparentFX

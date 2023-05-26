@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+
     
-    
-    
+
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Cube")
@@ -38,12 +38,16 @@ void Start()
     {
         
 
-
     }
     void Update()
     {
-
+        if (GameObject.FindGameObjectsWithTag("Cube").Length == 0)
+        {
+            SceneManager.LoadScene("GameClear");
+        }
+        
     }
- }
+    
+}
 
 
