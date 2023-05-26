@@ -21,9 +21,9 @@ public class PlayerController : MonoBehaviour
 
         // 기본값
         Speed = 5.0f;
-        Gravity = 10.0f;
+        Gravity = 15.0f;
         MoveDir = Vector3.zero;
-        JumpPow = 5.0f;
+        JumpPow = 7.0f;
         JumpButtonPressed = false;
     }
 
@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
                 rotationSpeed * Time.deltaTime / Vector3.Angle(transform.forward, MoveDir)
                 );
                 transform.LookAt(transform.position + forward);
+                animator.SetBool("isJump 1", false);
             }
             // 오브젝트가 바라보는 앞방향으로 이동방향을 돌려서 조정합니다.
           
@@ -53,11 +54,12 @@ public class PlayerController : MonoBehaviour
             MoveDir *= Speed;
 
             // 스페이스 버튼에 따른 점프 : 최종 점프버튼이 눌려있지 않았던 경우만 작동
-            if (JumpButtonPressed == false && Input.GetButton("Jump"))
+            if (JumpButtonPressed == false && Input.GetButtonDown("Jump"))
             {
                 animator.SetBool("isJump 1", true);
                 JumpButtonPressed = true;
                 MoveDir.y = JumpPow;
+                
             }
         }
         // 캐릭터가 바닥에 붙어 있지 않다면
@@ -68,9 +70,10 @@ public class PlayerController : MonoBehaviour
         }
 
         // 점프버튼이 눌려지지 않은 경우
-        if (!Input.GetButton("Jump"))
+        if (!Input.GetButtonDown("Jump"))
         {
-            JumpButtonPressed = false;  // 최종점프 버튼 눌림 상태 해제
+            JumpButtonPressed = false;
+            // 최종점프 버튼 눌림 상태 해제
         }
         // 앞 단계까지는 캐릭터가 이동할 방향만 결정하였으며,
         // 실제 캐릭터의 이동은 여기서 담당합니다.

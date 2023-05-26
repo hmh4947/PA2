@@ -3139,8 +3139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectPlayer: {fileID: 0}
-  Speed: 5
-  JumpPow: 3
+  Speed: 7
+  JumpPow: 5
   rotationSpeed: 360
 --- !u!82 &970670704
 AudioSource:
