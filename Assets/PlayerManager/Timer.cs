@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     public Text timerText;
 
-    public int timer = 300;
+    public int timer = 10;
 
     private void Start()
     {
@@ -23,6 +24,10 @@ public class Timer : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         StartCoroutine(TimerCoroution());
+        if(timer<0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
 
