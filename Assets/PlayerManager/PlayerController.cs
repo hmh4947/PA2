@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private AudioSource audio; // 사운드 출력을 위해선 AudioSource 필요
+    public AudioClip jumpSound;
+
     Animator animator;
     public CharacterController SelectPlayer; // 제어할 캐릭터 컨트롤러
     public float Speed;  // 이동속도
@@ -16,6 +19,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        this.audio = this.gameObject.AddComponent<AudioSource>(); // AudioSource 추가
+        this.audio.clip = this.jumpSound;
+        this.audio.loop = false;
+
         SelectPlayer = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
 
@@ -59,7 +66,8 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isJump 1", true);
                 JumpButtonPressed = true;
                 MoveDir.y = JumpPow;
-                
+                this.audio.Play();
+
             }
         }
         // 캐릭터가 바닥에 붙어 있지 않다면
