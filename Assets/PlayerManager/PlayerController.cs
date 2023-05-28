@@ -76,12 +76,14 @@ public class PlayerController : MonoBehaviour
         {
             // 중력의 영향을 받아 아래쪽으로 하강합니다.           
             MoveDir.y -= Gravity * Time.deltaTime;
+            
         }
 
         // 점프버튼이 눌려지지 않은 경우
         if (!Input.GetButtonDown("Jump"))
         {
             JumpButtonPressed = false;
+            
             // 최종점프 버튼 눌림 상태 해제
         }
         // 앞 단계까지는 캐릭터가 이동할 방향만 결정하였으며,

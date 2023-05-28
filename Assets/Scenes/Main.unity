@@ -3659,7 +3659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1784192283}
-  timer: 300
+  timer: 180
 --- !u!4 &1156941924
 Transform:
   m_ObjectHideFlags: 0
