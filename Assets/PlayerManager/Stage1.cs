@@ -18,15 +18,24 @@ public class Stage1 : MonoBehaviour
     {
         
     }
+    void OnTriggerStay(Collider other)
+    {
+
+        if (other.gameObject.tag == "Ball")
+        {
+            gameObject.transform.position = new Vector3(6f, 1.5f, 8f);
+            Debug.Log("감지");
+        }
+        
+    }
     void OnTriggerEnter(Collider other)
     {
 
         if (other.gameObject.tag == "Ball")
         {
-
             gameObject.transform.position = new Vector3(6f, 1.5f, 8f);
-            Debug.Log("감지");
+            
         }
-        
+
     }
 }

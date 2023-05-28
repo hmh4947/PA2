@@ -7,14 +7,16 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
 
-    
+    Animator animator;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Cube")
         {
             Destroy(other.gameObject);
+            animator.SetTrigger("Cube");
         }
+
         if (other.tag == "Coin")
         {
             Destroy(other.gameObject);
@@ -32,8 +34,8 @@ public class Player : MonoBehaviour
 // Start is called before the first frame update
 void Start()
     {
-        
 
+        animator = GetComponentInChildren<Animator>();
     }
     void Update()
     {

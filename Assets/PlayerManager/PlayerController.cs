@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
                 this.audio.Play();
 
             }
+           
         }
         // 캐릭터가 바닥에 붙어 있지 않다면
         else
